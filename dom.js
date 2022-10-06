@@ -19,21 +19,39 @@
 // header.innerText = "goodbye";
 
 // header.style.borderBottom = 'solid 3px black';
-var headtitle = document.querySelector(".title");
-headtitle.style.fontWeight = "bold";
-headtitle.style.color = "green";
+// var headtitle = document.querySelector(".title");
+// headtitle.style.fontWeight = "bold";
+// headtitle.style.color = "green";
 
-var items = document.getElementsByClassName("list-group-item");
-console.log(items);
-console.log(items[1]);
-items[2].style.background = "green";
+// var items = document.getElementsByClassName("list-group-item");
+// console.log(items);
+// console.log(items[1]);
+// items[2].style.background = "green";
 
-for(var i=0;i<items.length;i++){
-    items[i].style.fontWeight = "bold";
-}
+// for(var i=0;i<items.length;i++){
+//     items[i].style.fontWeight = "bold";
+// }
 
 // var item = document.getElementsByClassName("list-group-item");
 // console.log(item); No changes as list item does not contain class name "list-group-item".
 
-var item = document.getElementsByTagName("li");
-console.log(item); //OUTPUT - [li.list-group-item, li.list-group-item, li.list-group-item, li.list-group-item, li]
+// var item = document.getElementsByTagName("li");
+// console.log(item); OUTPUT - [li.list-group-item, li.list-group-item, li.list-group-item, li.list-group-item, li]
+
+
+// querySelector
+// var secondItem = document.querySelector(".list-group-item:nth-child(2)");
+// var thirdItem = document.querySelector(".list-group-item:nth-child(3)");
+
+// secondItem.style.background = "green";
+// thirdItem.style.display = "none";
+
+//querySelectorAll
+var items = document.querySelectorAll(".list-group-item");
+items[1].style.color = "green";
+
+var odd = document.querySelectorAll("li:nth-child(odd)");
+
+for(var i=0;i<odd.length;i++){
+    odd[i].style.background = "green";
+}
