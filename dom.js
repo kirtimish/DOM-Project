@@ -31,3 +31,9 @@ items[2].style.background = "green";
 for(var i=0;i<items.length;i++){
     items[i].style.fontWeight = "bold";
 }
+
+// var item = document.getElementsByClassName("list-group-item");
+// console.log(item); No changes as list item does not contain class name "list-group-item".
+
+var item = document.getElementsByTagName("li");
+console.log(item); //OUTPUT - [li.list-group-item, li.list-group-item, li.list-group-item, li.list-group-item, li]
